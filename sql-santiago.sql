@@ -1,13 +1,11 @@
 CREATE SCHEMA IF NOT EXISTS examen_santiago;
 USE examen_santiago;
 
-DROP TABLE IF EXISTS region;
 CREATE TABLE region
  (codigo                         INT  NOT NULL PRIMARY KEY ,
   nombre                     VARCHAR(10) NOT NULL
  );
 
-DROP TABLE IF EXISTS distrito;
 CREATE TABLE distrito
  (codigo                         INT  NOT NULL PRIMARY KEY ,
   nombre                     VARCHAR(100),
@@ -15,7 +13,6 @@ CREATE TABLE distrito
  FOREIGN KEY  (region_codigo) REFERENCES region(codigo) 
  );
 
-DROP TABLE IF EXISTS alumno;
 CREATE TABLE alumno
  (codigo  INT  NOT NULL PRIMARY KEY ,
  dni   CHAR(8),
@@ -56,7 +53,7 @@ INSERT INTO alumno VALUES(1001, 12345678,'Perez','Rojas','Luis','Av Primavera 12
 INSERT INTO alumno VALUES(1002, 23456789,'Gonzales','Lopez','Ana','Calle Lima 456', 102);
 INSERT INTO alumno VALUES(1003, 34567890,'Ramirez','Salazar','Carlos','Jr. Cursco', 103);
 INSERT INTO alumno VALUES(1004, 45678901,'Sanchez','Castro','Maria','Av. Larco', 104);
-INSERT INTO alumno VALUES(1005, 56789012,'Torres','Nuñez','Jorge','Jr.. Grau 654', 105);
+INSERT INTO alumno VALUES(1005, 56789012,'Torres','NuÃ±ez','Jorge','Jr.. Grau 654', 105);
 INSERT INTO alumno VALUES(1006, 67890123,'Fernadez','Ortiz','Carmen','Av. Bolognesi 987', 106);
 INSERT INTO alumno VALUES(1007, 78901234,'Martiz','Morales','Fernando','Calle Real 246', 107);
 INSERT INTO alumno VALUES(1008, 89012345,'Chavez','Gomez','Elena','Av. Amazonas 753', 108);
